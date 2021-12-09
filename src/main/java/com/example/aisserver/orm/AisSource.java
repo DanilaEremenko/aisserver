@@ -1,4 +1,4 @@
-package com.example.aisserver;
+package com.example.aisserver.orm;
 
 import lombok.Getter;
 import lombok.Setter;
