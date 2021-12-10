@@ -2,65 +2,58 @@ package com.example.aisserver.orm;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "ais_track")
 public class AisTrack {
     @Id
-    @Getter
-    @Setter
     private Long id;
 
-
-    @Setter
-    @Getter
+    @Column(name = "vessel_id")
     private Integer vessel_id;
-    @Setter
-    @Getter
+    @Column(name = "source_id")
     private Integer source_id;
 
-    @Setter
-    @Getter
+//    @Nullable
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "vessel_id")
+//    private Vessel vessel;
+
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "source_id")
+//    private AisSource aisSource;
+
+    @Column(name = "status_code")
     private Integer status_code;
-    @Setter
-    @Getter
+    @Column(name = "latitude")
     private Double latitude;
-    @Setter
-    @Getter
+    @Column(name = "longitude")
     private Double longitude;
 
-    @Setter
-    @Getter
+    @Column(name = "position")
     private String position;
-    @Setter
-    @Getter
+    @Column(name = "destination")
     private String destination;
 
-    @Setter
-    @Getter
+    @Column(name = "heading")
     private Double heading;
-    @Setter
-    @Getter
+    @Column(name = "course")
     private Double course;
-    @Setter
-    @Getter
+    @Column(name = "draught")
     private Double draught;
-    @Setter
-    @Getter
+    @Column(name = "speed")
     private Double speed;
-    @Setter
-    @Getter
+    @Column(name = "rot")
     private Double rot;
 
-    @Setter
-    @Getter
+    @Column(name = "eta")
     private String eta;
-    @Setter
-    @Getter
+    @Column(name = "rec_date")
     private Timestamp rec_date;
 }

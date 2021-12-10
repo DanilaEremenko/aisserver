@@ -1,7 +1,7 @@
 package com.example.aisserver.controllers;
 
-import com.example.aisserver.orm.AisRepository;
 import com.example.aisserver.orm.AisTrack;
+import com.example.aisserver.repositories.AisTrackRepo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
@@ -10,9 +10,9 @@ import java.util.List;
 @RestController
 class AisTrackController {
 
-    private final AisRepository repository;
+    private final AisTrackRepo repository;
 
-    AisTrackController(AisRepository repository) {
+    AisTrackController(AisTrackRepo repository) {
         this.repository = repository;
     }
 

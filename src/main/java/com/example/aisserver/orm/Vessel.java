@@ -3,32 +3,27 @@ package com.example.aisserver.orm;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "vessel")
 public class Vessel {
     @Id
-    @Getter
-    @Setter
+    @Column(name = "id")
     private Long id;
 
-    @Getter
-    @Setter
+    @Column(name = "type_id")
     private Long typeId;
 
-    @Getter
-    @Setter
+    @Column(name = "name")
     private String name;
 
-    @Getter
-    @Setter
+    @Column(name = "mmsi")
     private Integer mmsi;
 
-    @Getter
-    @Setter
+    @Column(name = "imo")
     private Integer imo;
 
 }
